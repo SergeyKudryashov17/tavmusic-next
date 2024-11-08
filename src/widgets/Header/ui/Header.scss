@@ -1,0 +1,26 @@
+.Header {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    padding: 20px 0;
+    background-color: var(--white-color);
+    border-bottom: 1px solid var(--light-gray-color);
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__letfPart,
+    &__rightPart {
+        display: flex;
+        align-items: center;
+    }
+
+    &__seporator {
+        width: 1px;
+        height: 80%;
+        background-color: var(--light-gray-color3);
+    }
+} 

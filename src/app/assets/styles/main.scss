@@ -1,0 +1,9 @@
+@import './fonts.scss';
+@import './vars.scss';
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    margin: 0;
+    padding: 0;
+}

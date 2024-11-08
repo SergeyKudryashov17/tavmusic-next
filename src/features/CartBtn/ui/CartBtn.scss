@@ -1,0 +1,27 @@
+.CartBtn {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.CartBtn__icon {
+    width: 26px;
+    height: 26px;
+}
+
+.CartBtn__counter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    line-height: 1;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    border: 1px solid var(--gray-color);
+}

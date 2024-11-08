@@ -1,0 +1,15 @@
+.CartItem {
+    display: grid;
+    grid-template-columns: 1fr 200px 200px 200px 50px;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #D9DADB;
+
+    &__count .Counter__btn {
+        background-color: #FFF;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}

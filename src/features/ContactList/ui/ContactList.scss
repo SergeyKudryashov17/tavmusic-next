@@ -1,0 +1,19 @@
+.ContactsList {
+
+}
+
+.ContactsList__item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--gray-color);
+    margin-bottom: 6px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ContactsList__itemIcon {
+    margin-right: 6px;
+}

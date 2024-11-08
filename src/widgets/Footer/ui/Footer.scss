@@ -1,0 +1,36 @@
+.Footer {
+    padding: 40px 0 30px;
+    background-color: #F4F5F6;
+
+    &__logo {
+        width: 100px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 30px;
+    }
+
+    &__column {
+        padding-right: 40px;
+    }
+
+    &__contactItem {
+        display: block;
+        font-weight: 300;
+        color: var(--black-color);
+        margin-bottom: 16px;
+    }
+
+    &__address {
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    &__copyright {
+        font-weight: 300;
+        text-align: right;
+        color: #95A1BB;
+    }
+}

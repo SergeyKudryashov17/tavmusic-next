@@ -1,0 +1,24 @@
+.ArticleList {
+    &__container {
+        margin-bottom: 50px;
+
+        &_row {
+
+        }
+
+        &_column {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 32px;
+        }
+    }
+
+    &__linkWrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}

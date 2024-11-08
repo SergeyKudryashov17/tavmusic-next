@@ -1,0 +1,30 @@
+.BtnNextStep {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.CartFooter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.FullPrice {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+
+    &__label {
+        font-size: 20px;
+        font-weight: 600;
+        color: #4B5157;
+        margin-right: 10px;
+    }
+    &__value {
+        font-size: 22px;
+        font-weight: 700;
+    }
+}

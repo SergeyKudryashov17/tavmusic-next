@@ -1,0 +1,47 @@
+.ArticleItem {
+    display: flex;
+
+    &__picture {
+        flex-shrink: 0;
+        width: 140px;
+        height: 140px;
+        background-color: var(--gray-color);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 20px;
+        border-radius: 20px;
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+        height: 140px;
+    }
+
+    &__title {
+        font-size: 17px;
+        flex-shrink: 0;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    &__desc {
+        font-size: 14px;
+        font-weight: 300;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        flex-shrink: 0;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    &__btn {
+
+    }
+}

@@ -1,0 +1,40 @@
+.Button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    transition: all .2s;
+
+    &_full {
+        width: 100%;
+    }
+
+    &_primary {
+        border-color: var(--accent-color);
+        color: var(--white-color);
+        background-color: var(--accent-color);
+    }
+    &_primary:hover {
+        background-color: var(--white-color);
+        color: var(--accent-color);
+    }
+
+    &_center {
+        margin: 0 auto;
+    }
+
+    &_m {
+        font-weight: 500;
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+
+    &_l {
+        font-weight: 600;
+        font-size: 20px;
+        padding: 14px 26px;
+    }
+}

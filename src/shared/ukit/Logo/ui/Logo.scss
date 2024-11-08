@@ -1,0 +1,25 @@
+.Logo {
+    width: 160px;
+}
+
+.Logo_header {
+    position: relative;
+    width: 140px;
+    margin-right: 38px;
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: -12px;
+        content: '';
+        transform: translateY(-50%);
+        width: 1px;
+        height: 75%;
+        background-color: var(--light-gray-color3);
+    }
+}
+
+.Logo__img {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,25 @@
+.Counter {
+    display: flex;
+    align-items: center;
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background-color: var(--light-gray-color2);
+        border: 1px solid var(--light-gray-color2);
+        border-radius: 15px;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid var(--middle-gray-color);
+        }
+    }
+
+    &__value {
+        color: #777777;
+        margin: 0 14px;
+        font-size: 18px;
+    }
+}

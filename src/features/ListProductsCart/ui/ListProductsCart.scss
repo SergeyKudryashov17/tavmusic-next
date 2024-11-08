@@ -1,0 +1,14 @@
+.ListProductsCart {
+    background-color: var(--light-gray-color);
+    border-radius: 5px;
+    padding: 20px;
+    padding-bottom: 0;
+
+    &__header {
+        display: grid;
+        grid-template-columns: 1fr 200px 200px 200px 50px;
+        color: var(--dark-color);
+        border-bottom: 1px solid #D9DADB;
+        padding-bottom: 18px;
+    }
+}

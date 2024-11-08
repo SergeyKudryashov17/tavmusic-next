@@ -1,0 +1,23 @@
+.SubCategoriesItem {
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    grid-gap: 15px;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    padding: 8px;
+    text-decoration: none;
+    background-color: #FFF;
+
+    &__image {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 14px;
+        text-decoration: none;
+        color: var(--black-color);
+    }
+}
