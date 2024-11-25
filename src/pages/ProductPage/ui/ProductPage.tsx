@@ -10,8 +10,9 @@ import { useParams } from 'next/navigation'
 import { useProductData } from "@/entities/Product/hooks/useProductData";
 import { getCategoryBreadcrumbsItems } from "@/entities/Category";
 import { Breadcrumb } from "antd";
+import {ReactNode} from "react";
 
-const ProductPage = () => {
+const ProductPage = (): ReactNode => {
     const params = useParams<{ id: string }>() ?? null;
 
     const productData = params && params?.id !== null 
@@ -27,7 +28,7 @@ const ProductPage = () => {
 
         if (breadcrumbProduct) {
             breadcrumbs.push(breadcrumbProduct)
-        };
+        }
     }
 
     return (

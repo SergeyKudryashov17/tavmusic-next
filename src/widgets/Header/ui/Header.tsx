@@ -7,11 +7,12 @@ import Navigation from "@/features/Navigation";
 import ContactList from '@/features/ContactList';
 import Container from '@/shared/ukit/Container';
 import Link from 'next/link';
-import { useAppSelector } from '@/shared/hooks/useAppSelector';
+// import { useAppSelector } from '@/shared/hooks/useAppSelector';
 import { getProductsCart } from '@/shared/helpers';
+import {useSelector} from "react-redux";
 
 export const Header = () => {
-    const productsCart = useAppSelector(getProductsCart);
+    const productsCart = useSelector(getProductsCart);
 
     return ( 
         <div className="Header">

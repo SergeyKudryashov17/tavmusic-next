@@ -1,5 +1,5 @@
 /* Hooks */
-import { useEffect, useState } from "react";
+import {ReactNode, useEffect, useState} from "react";
 
 /* Types */
 import { IProduct } from "@/entities/Product";
@@ -19,16 +19,15 @@ import './ProductInfo.scss';
 
 /* Utils */
 import ProductCharsList from "./ProductChars";
-import { getFormatCost, getShortText } from "@/shared/utils";
-import { 
-    isAddedToCart, 
-    addProductToCart, 
-    removeProductFromCart, 
-    changeQuantityProduct 
-} from "@/shared/helpers";
+import {getFormatCost, getShortText} from "@/shared/utils";
+import {isAddedToCart} from "@/shared/helpers";
+import {useAppDispatch} from "@/app/store/hooks/hooks";
+import {cartActions} from "@/app/store/model/cartSlice";
 
 
-export const ProductInfo = ({ ...productData }: IProduct) => {
+export const ProductInfo = (
+    { ...productData }: IProduct
+): ReactNode => {
     const addedToCart = isAddedToCart(productData.id);
 
     const [flagInCart, setFlagInCart] = useState<boolean>(addedToCart);
@@ -85,17 +84,28 @@ export const ProductInfo = ({ ...productData }: IProduct) => {
         }
     ];
 
+    const dispatch = useAppDispatch();
+
     function addToCart() {
-        addProductToCart(productData);
+        dispatch(
+            cartActions.addProduct(productData)
+        );
         if (countProduct > 1) {
-            changeQuantityProduct(productData.id, countProduct);
+            dispatch(
+                cartActions.changeQuantity({
+                    id: productData.id,
+                    count: countProduct
+                })
+            );
         }
 
         setFlagInCart(true);
     }
 
     function removeToCart() {
-        removeProductFromCart(productData.id);
+        dispatch(
+            cartActions.removeProduct(productData.id)
+        );
         setFlagInCart(false);
     }
 
@@ -109,7 +119,12 @@ export const ProductInfo = ({ ...productData }: IProduct) => {
     }
 
     useEffect(() => {
-        changeQuantityProduct(productData.id, countProduct)
+        dispatch(
+            cartActions.changeQuantity({
+                id: productData.id,
+                count: countProduct
+            })
+        );
     }, [countProduct]);
 
     return (

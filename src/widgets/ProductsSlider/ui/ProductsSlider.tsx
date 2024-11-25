@@ -1,10 +1,11 @@
+'use client';
+
 import SlickSlider from "@/shared/ukit/SlickSlider";
 import { ProductSliderPropsType } from "../types/ProductSliderPropsType";
 import { IProduct } from "@/entities/Product";
 import ProductCard from "@/features/ProductCard";
 import './ProductsSlider.scss';
 import { NextArrowBtn, PrevArrowBtn } from "@/shared/ukit/ArrowBtns";
-import { addProductToCart } from "@/shared/helpers";
 
 export const ProductsSlider = ({ productList }: ProductSliderPropsType) => {
     const settings = {
@@ -18,17 +19,14 @@ export const ProductsSlider = ({ productList }: ProductSliderPropsType) => {
 
     return (
         <SlickSlider className="ProductsSlider" settings={settings}>
-            { 
-                productList.map((product: IProduct, index: number) => { 
-                    return (
-                        <ProductCard 
-                            data={product} 
-                            key={`ProductCard-${index}`}
-                            btnHandler={() => addProductToCart(product)}
-                        />
-                    )
-                })    
-            }
+            { productList.map((product: IProduct, index: number) => { 
+                return (
+                    <ProductCard 
+                        data={product} 
+                        key={`ProductCard-${index}`}
+                    />
+                )
+            })}
         </SlickSlider>
     );
 }

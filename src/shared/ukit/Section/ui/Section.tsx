@@ -1,3 +1,5 @@
+'use client';
+
 import { SectionPaggings, SectionPropsType, SectionViews } from "../SectionPropsType";
 import './Section.scss';
 

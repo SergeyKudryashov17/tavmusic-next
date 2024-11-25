@@ -1,3 +1,5 @@
+'use client';
+
 import { ButtonPropsType, ButtonSize } from '../ButtonTypes';
 import './Button.scss';
 

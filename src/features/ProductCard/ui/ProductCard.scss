@@ -59,6 +59,10 @@
         }
     }
 
+    &__linkCart {
+        text-decoration: none;
+    }
+
     &__inCart {
         border: 1px solid var(--accent-color);
         background-color: var(--white-color);

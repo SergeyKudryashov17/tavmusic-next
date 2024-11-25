@@ -1,5 +1,7 @@
+import PurchasePage from "@/pages/PurchasePage";
+
 export default function Purchase() {
-  return (
-    <div>Оформление заказа</div>
-  );
+    return (
+        <PurchasePage />
+    );
 }

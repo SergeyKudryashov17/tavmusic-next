@@ -1,3 +1,3 @@
-import { store } from "../config/storeConfig";
-
-export type AppDispatch = typeof store.dispatch;
+// import { store } from "../config/storeConfig";
+//
+// export type AppDispatch = typeof store.dispatch;

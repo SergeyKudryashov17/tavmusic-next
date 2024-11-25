@@ -7,11 +7,11 @@ import Link from "next/link";
 
 export const ArticleList = ({ list, visibleCount, view }: ArticleListPropsType) => {
     return (
-        <div className="ArticleList">
+        <div className="ArticleList" key="ArticleList">
             <div className={`ArticleList__container ArticleList__container_${view}`} data-count={visibleCount}>
                 { list.map((article: IArticle, index: number) => {
                     return index < visibleCount
-                        ? <ArticleItem {...article} />
+                        ? <ArticleItem {...article} key={`ArticleList-${article.id}`} />
                         : '';
                 })}
             </div>

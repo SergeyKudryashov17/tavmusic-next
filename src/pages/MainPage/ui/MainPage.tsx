@@ -8,8 +8,7 @@ import Headline, { HeadlineViews } from "@/shared/ukit/Headline";
 import Section, { SectionViews } from "@/shared/ukit/Section";
 import GridCategories from "@/widgets/GridCategories";
 import BrandSlider from "@/features/BrandSlider";
-import ArticleList from "@/features/ArticleList";
-import { ArticleListView } from "@/features/ArticleList";
+import ArticleList, { ArticleListView } from "@/features/ArticleList";
 
 import { bestProductList } from '@/entities/Product/data/BestProductsList';
 import { stockMoscow } from "@/entities/Product/data/stockMoscow";
@@ -24,7 +23,7 @@ const MainPage = () => {
         <>
             <BigSlider />
 
-            <Section>
+             <Section>
                 <Container>
                     <Headline view={HeadlineViews.Section}>
                         Категории товаров

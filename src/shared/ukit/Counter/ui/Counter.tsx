@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { CounterPropsType } from '../types';
 import './Counter.scss';

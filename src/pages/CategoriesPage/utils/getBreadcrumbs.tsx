@@ -1,7 +1,7 @@
 import { getParentsCategoryChain, ICategory } from "@/entities/Category";
 import Link from "next/link";
 
-export function getBreadcrumbs(currentCategoryID: ICategory['id'] | undefined) {
+export default function getBreadcrumbs(currentCategoryID: ICategory['id'] | undefined) {
     if (currentCategoryID === undefined) return [];
 
     const parentsCategoriesChain = getParentsCategoryChain(currentCategoryID);

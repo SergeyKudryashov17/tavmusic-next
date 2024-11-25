@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AppState } from "../types/AppStore";
+// import { AppState } from "../types/AppStore";
 import { stateProductItem } from "../types/StateProductItem";
 import { cartSliceType } from "../types/CartSliceType";
 

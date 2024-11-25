@@ -1,8 +1,7 @@
-'use client'
+'use client';
 
 import ListProductsCart from "@/features/ListProductsCart";
 import { getProductsCart } from "@/shared/helpers";
-import { useAppSelector } from "@/shared/hooks/useAppSelector";
 import Button from "@/shared/ukit/Button";
 import Container from "@/shared/ukit/Container";
 import Headline, { HeadlineViews } from "@/shared/ukit/Headline";
@@ -10,19 +9,22 @@ import Section, { SectionPaggings } from "@/shared/ukit/Section";
 import { getFormatCost } from "@/shared/utils";
 import { Breadcrumb } from "antd";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import {ReactNode, useEffect, useState} from "react";
 import style from "./CartPage.module.scss";
+import {useSelector} from "react-redux";
 
-const CartPage = () => {
+const CartPage = (): ReactNode => {
     const breadcrumbs = [ 
         { title: <Link href="/">Главная</Link> },
         { title: <div>Корзина</div> }  
     ];
 
-    const productsInCart = useAppSelector(getProductsCart);
-    const getFullPrice = () => productsInCart.reduce((acc, item) => {
-        return acc + (item.count * item.product.cost);
-    }, 0);
+    const productsInCart = useSelector(getProductsCart);
+    const getFullPrice = () => productsInCart.reduce(
+        (acc, item) => {
+            return acc + (item.count * item.product.cost);
+        },
+    0);
     const [fullPrice, setFullPrice] = useState<number>(getFullPrice());
 
     useEffect(() => {
@@ -49,7 +51,10 @@ const CartPage = () => {
                             <span className={style.FullPrice__label}>Итого:</span>
                             <span className={style.FullPrice__value}>{ getFormatCost(fullPrice) }</span>
                         </div>
-                        <Link href="/purchase">
+                        <Link
+                            className={style.LinkNextStep}
+                            href="/purchase"
+                        >
                             <Button className={style.BtnNextStep}>
                                 Перейти к оформлению
                             </Button>

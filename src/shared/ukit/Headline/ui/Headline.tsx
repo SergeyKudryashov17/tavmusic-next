@@ -1,3 +1,5 @@
+'use client';
+
 import { HeadlinePropsType } from "../HeadlineTypes";
 import './Headline.scss';
 

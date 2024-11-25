@@ -1,3 +1,4 @@
-import { AppState } from "@/app/store/types/AppStore";
+import {stateProductItem} from "@/app";
 
-export const getProductsCart = (state: AppState) => state.cart.products;
+// ToDo: Поправить типизацию state
+export const getProductsCart = (state: any): stateProductItem[] => state.cart.products;

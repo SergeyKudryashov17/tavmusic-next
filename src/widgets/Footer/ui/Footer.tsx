@@ -23,7 +23,7 @@ export const Footer = () => {
                         <Headline view={HeadlineViews.H6} style={{ marginBottom: '15px' }}>Контакты</Headline>
                         <a className="Footer__contactItem" href="#">shop@tavmusic.ru</a>
                         <a className="Footer__contactItem" href="#">+7 (495) 165-66-95</a>
-                        <address className="Footer__address">г. Москва <br />проезд завода Серп и Молот, д. 6, подъезд 1, этаж 4, офис 37</address>
+                        <address className="Footer__address">г. Москва <br />1-й проезд Перова Поля, 10</address>
                     </div>
                     <div className="Footer__column">
                         <Headline view={HeadlineViews.H6} style={{ marginBottom: '15px' }}>Категории товаров</Headline>

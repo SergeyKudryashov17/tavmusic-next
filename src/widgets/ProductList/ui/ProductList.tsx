@@ -2,7 +2,6 @@ import { IProduct } from "@/entities/Product";
 import { ProductListProps } from "../types";
 import ProductCard from "@/features/ProductCard";
 import './ProductList.scss';
-import { addProductToCart } from "@/shared/helpers";
 
 export const ProductList = ({ list }: ProductListProps) => {
     return (
@@ -12,7 +11,6 @@ export const ProductList = ({ list }: ProductListProps) => {
                     <ProductCard 
                         key={`ProductCard-${key}`} 
                         data = {product}
-                        btnHandler={() => addProductToCart(product)}
                     />
                 )
             })}

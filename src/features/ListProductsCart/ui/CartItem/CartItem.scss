@@ -5,6 +5,15 @@
     padding: 25px 0;
     border-bottom: 1px solid #D9DADB;
 
+    &_short {
+      grid-template-columns: 1fr 200px 200px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+
     &__count .Counter__btn {
         background-color: #FFF;
     }

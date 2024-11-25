@@ -11,4 +11,8 @@
         border-bottom: 1px solid #D9DADB;
         padding-bottom: 18px;
     }
+
+    &_short &__header {
+      grid-template-columns: 1fr 200px 200px;
+    }
 }
