@@ -12,6 +12,7 @@ import Link from "next/link";
 import {ReactNode, useEffect, useState} from "react";
 import style from "./CartPage.module.scss";
 import {useSelector} from "react-redux";
+import {ListProductsInCart} from "../../../widgets/ListProductsInCart/ui/ListProductsInCart";
 
 const CartPage = (): ReactNode => {
     const breadcrumbs = [ 
@@ -45,7 +46,9 @@ const CartPage = (): ReactNode => {
             </Section>
             <Section style={{ paddingTop: '0' }}>
                 <Container>
-                    <ListProductsCart />
+                    {/*<ListProductsCart />*/}
+                    { <ListProductsInCart /> }
+
                     <div className={style.CartFooter}>
                         <div className={style.FullPrice}>
                             <span className={style.FullPrice__label}>Итого:</span>
