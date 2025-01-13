@@ -64,8 +64,8 @@ export const CartItem = (
             <Counter
               className="CartItem__count"
               count={count}
-                onIncrease={increase}
-                onDecrease={decrease}
+              onIncrease={increase}
+              onDecrease={decrease}
             />
             <div className="CartItem__fullPrice">
                 { getFormatCost(fullPrice) }
