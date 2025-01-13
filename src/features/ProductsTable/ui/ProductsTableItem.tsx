@@ -12,6 +12,7 @@ import {
 import {IProduct} from "@/entities/Product";
 import {getFormatCost} from "@/shared/utils";
 import {SYMBOL_RUB} from "@/shared/consts";
+import {CloseIcon} from "@/shared/icons";
 
 export const ProductsTableItem = (
   { columnsConfig, productData, onIncrease, onDecrease, onDelete }: ProductsTableItemProps
@@ -70,8 +71,10 @@ export const ProductsTableItem = (
       { hasColumnDelete(columnsConfig) && (
         <div className="ProductsTable__Cell ProductsTable__Cell_actions">
           <button
-            onClick={() => handlerProperty(onDelete, productData.product.id)}>
-            Удалить
+            onClick={() => handlerProperty(onDelete, productData.product.id)}
+            title="Удалить"
+          >
+            <CloseIcon />
           </button>
         </div>
       )}

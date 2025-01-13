@@ -27,6 +27,10 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    & .Counter__btn {
+      background-color: #FFF;
+    }
   }
 
   &__Cell {
@@ -54,7 +58,7 @@
     }
 
     &_counter {
-      width: 200px;
+      width: 165px;
     }
 
     &_summ {
@@ -62,7 +66,7 @@
     }
 
     &_actions {
-      width: 100px;
+      width: 25px;
     }
   }
 }

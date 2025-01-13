@@ -25,8 +25,11 @@ export const ProductsTable = (
         { hasColumnPrice(columnsConfig) && (
           <div className="ProductsTable__HeaderCell ProductsTable__Cell ProductsTable__Cell_price">Цена</div>
         ) }
-        { (hasColumnCounter(columnsConfig) || hasColumnCount(columnsConfig)) && (
+        { hasColumnCount(columnsConfig) && (
           <div className="ProductsTable__HeaderCell ProductsTable__Cell ProductsTable__Cell_count">Кол-во</div>
+        ) }
+        { hasColumnCounter(columnsConfig) && (
+          <div className="ProductsTable__HeaderCell ProductsTable__Cell ProductsTable__Cell_counter">Кол-во</div>
         ) }
         { hasColumnSumPrice(columnsConfig) && (
           <div className="ProductsTable__HeaderCell ProductsTable__Cell ProductsTable__Cell_summ">Стоимость</div>
