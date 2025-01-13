@@ -1,5 +1,5 @@
 import Container from "@/shared/ukit/Container";
-import Section from "@/shared/ukit/Section";
+import Section, {SectionPaggings} from "@/shared/ukit/Section";
 import Headline, {HeadlineViews} from "@/shared/ukit/Headline";
 import Button from "@/shared/ukit/Button";
 import './OrderCompletionPage.scss';
@@ -7,11 +7,20 @@ import {ReactNode} from "react";
 import Image from 'next/image';
 import SuccessImage from "@/shared/assets/img/ConfirmedOrder.png";
 import Link from "next/link";
+import {Breadcrumb} from "antd";
 
 const OrderCompletionPage = (): ReactNode => {
+  const breadcrumbs = [
+    { title: <Link href="/">Главная</Link> },
+    { title: 'Завершение оформления заказа' }
+  ];
+
   return (
     <Container>
-      <Section>
+      <Section padding={SectionPaggings.S} style={{ paddingBottom: '0' }}>
+        <Breadcrumb items={breadcrumbs} />
+      </Section>
+      <Section style={{ paddingTop: '0' }}>
         <div className="grid grid-cols-2 gap-1 items-center">
           <div className="">
             <div className="labelCompleteOrder">Оформление заказа завершено</div>
