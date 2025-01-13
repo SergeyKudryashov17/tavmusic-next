@@ -1,0 +1,68 @@
+.ProductsTable {
+  background-color: var(--light-gray-color);
+  border-radius: 5px;
+  padding: 20px 15px 20px;
+
+  &__header {
+    display: flex;
+    border-bottom: 1px solid #D9DADB;
+    padding-bottom: 10px;
+  }
+
+  &__HeaderCell {
+    color: var(--dark-color);
+  }
+
+  &__body {
+    padding-top: 15px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__Cell {
+    flex-shrink: 0;
+    padding-right: 20px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &_name {
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      align-items: center;
+      grid-gap: 15px;
+    }
+
+    &_price {
+      width: 120px;
+    }
+
+    &_count {
+      width: 100px;
+    }
+
+    &_counter {
+      width: 200px;
+    }
+
+    &_summ {
+      width: 120px;
+    }
+
+    &_actions {
+      width: 100px;
+    }
+  }
+}
