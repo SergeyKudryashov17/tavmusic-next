@@ -11,20 +11,22 @@ import { NextArrowIcon } from "./NextArrowIcon/NextArrowIcon";
 import { MinusIcon } from "./MinusIcon/MinusIcon";
 import { PlusIcon } from "./PlusIcon/PlusIcon";
 import { CartFillIcon } from "./CartIcon/CartFillIcon";
+import { CloseIcon } from "./CloseIcon/CloseIcon";
 
 export {
-    MailIcon,
-    PhoneIcon,
-    ClockIcon,
-    PackageIcon,
-    HandshakeIcon,
-    ThumbsUpIcon,
-    PaletteIcon,
-    PrevArrowIcon,
-    NextArrowIcon,
-    MinusIcon,
-    PlusIcon,
-    CartFillIcon,
-    
-    type iconType
+  MailIcon,
+  PhoneIcon,
+  ClockIcon,
+  PackageIcon,
+  HandshakeIcon,
+  ThumbsUpIcon,
+  PaletteIcon,
+  PrevArrowIcon,
+  NextArrowIcon,
+  MinusIcon,
+  PlusIcon,
+  CartFillIcon,
+  CloseIcon,
+
+  type iconType
 }
